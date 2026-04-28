@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>외식시장규모 리포트</title>
+<style>
+  body { font-family: 'Malgun Gothic', sans-serif; padding: 40px; background: #f5f6f8; }
+  h1 { color: #1a3a5c; }
+  ul { list-style: none; padding: 0; }
+  li { margin: 10px 0; }
+  a { color: #2c5f8a; font-size: 18px; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<h1>외식시장규모 리포트 목록</h1>
+<ul id="list"></ul>
+<script>
+const reports = [
+  "국밥류"
+];
+const ul = document.getElementById("list");
+reports.forEach(r => {
+  const li = document.createElement("li");
+  li.innerHTML = `<a href="report_${r}.html">📊 ${r}</a>`;
+  ul.appendChild(li);
+});
+</script>
+</body>
+</html>
